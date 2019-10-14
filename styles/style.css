@@ -3,8 +3,115 @@
   [property]: [value];
 }
 
+* {
+  box-sizing: border-box;
+}
+
 /* Global Styles go here */
 body {
   background: white;
   color: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+.tr-page {
+  width: 100%;
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.tr-title-container {
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.tr-title-letter {
+  position: relative;
+  width: 12.5%;
+  float: left;
+}
+
+.tr-title-letter-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.tr-title-letter:hover .tr-title-letter-hover {
+  opacity: 1;
+  transform: rotate(5deg);
+  transition: transform 1s ease;
+}
+
+.tr-title-letter:hover .tr-title-letter-outline {
+  opacity: 0;
+}
+
+.tr-sway-container {
+  width: 70%;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+}
+
+.tr-sway {
+  width: 25%;
+  position: relative;
+  overflow: hidden;
+  margin: 0 2%;
+  animation: sway1 10s infinite;
+  transform-origin: 50% 100% 0;
+}
+@keyframes sway1 {
+  0%, 100% {transform: rotate(-8deg);}
+  50% {transform: rotate(6deg);}
+}
+
+.tr-spin {
+  width: 25%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 5vh;
+  overflow: hidden;
+}
+
+.tr-spin2 {
+  width: 25%;
+  margin: 0 auto;
+  position: absolute;
+  top: 15vh;
+  left: 130vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.tr-spin-container {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
 }
